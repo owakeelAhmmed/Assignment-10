@@ -1,23 +1,22 @@
 [
     {
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5SlxmQQ1u70uk5Xd6WilP9ojlT28FpwL_ag&usqp=CAU",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ7rlznR3s_spsu5kaAkvXNuBrRNEEin9xWA&usqp=CAU",
       "id": 1,
       "name": "Online Class",
-      "message": "Sei product bodda, sei sei",
-      "rate": 3.8
+      "description": "We have rounded up five gym classes that will guarantee visible results while ensuring that you become a better athlete"
     },
     {
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5SlxmQQ1u70uk5Xd6WilP9ojlT28FpwL_ag&usqp=CAU",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0OxE676eow0LNkinc_i01j3BnTRhd5tLCVw&usqp=CAU",
       "id": 2,
       "name": "Personal Trainer",
-      "message": "Sei product bodda, sei sei",
-      "rate": 4.2
+      "description": "Personal trainers assess their customers' bodily strengths and weaknesses and create customized workout plans."
+      
     },
     {
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5SlxmQQ1u70uk5Xd6WilP9ojlT28FpwL_ag&usqp=CAU",
+      "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/salad-mix-plate-shot-from-above-on-rustic-wooden-royalty-free-image-1018199524-1556130377.jpg?crop=0.66635xw:1xh;center,top&resize=480:*",
       "id": 3,
       "name": "Diet Program",
-      "message": "Sei product bodda, sei sei",
-      "rate": 3.5
+      "description": "A diet plan is tailored to an individual's health status, weight and lifestyle, along with their weight loss and health goals."
+      
     }
   ]

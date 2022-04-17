@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css'
 import img1 from'../images/silhouette-2860007 (1).png'
 import Services from '../Services/Services';
+import Footer from '../Footer/Footer';
 const Home = () => {
     return ( 
         <section>
@@ -21,6 +22,10 @@ const Home = () => {
             
             <div className="">
                 <Services/>
+            </div>
+
+            <div>
+                <Footer/>
             </div>
         </section>
      
