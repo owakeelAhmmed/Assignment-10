@@ -1,0 +1,12 @@
+.service-card{
+    width: 300px;
+    border-radius: 33px;
+    background: #23262A;
+    box-shadow:  11px 11px 30px #111214,
+                -11px -11px 30px #353a40;
+}
+.card-img img{
+    width:250px;
+    border-radius: 26px;
+
+}

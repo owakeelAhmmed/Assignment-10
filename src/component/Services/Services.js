@@ -12,9 +12,9 @@ const Services = () => {
     return (
         
         <div className=" container">
-          
-            <div className="row">
-                <div className="col-md-3 col-lg-4 w-50">
+          <h1 className="  text-danger mt-5">The Services</h1>
+         
+                <div className=" row gap-5 mt-5 p-5">
                     {
                 services.map(service => <Service
                     key={service.id}
@@ -22,7 +22,7 @@ const Services = () => {
                 ></Service>)  
                 }
                 </div>
-        </div>
+        
         </div>
     );
 };
