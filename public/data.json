@@ -1,0 +1,44 @@
+[
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5SlxmQQ1u70uk5Xd6WilP9ojlT28FpwL_ag&usqp=CAU",
+      "id": 1,
+      "name": "George Silva",
+      "message": "Sei product bodda, sei sei",
+      "rate": 3.8
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5SlxmQQ1u70uk5Xd6WilP9ojlT28FpwL_ag&usqp=CAU",
+      "id": 2,
+      "name": "Jennie Horton",
+      "message": "Sei product bodda, sei sei",
+      "rate": 4.2
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5SlxmQQ1u70uk5Xd6WilP9ojlT28FpwL_ag&usqp=CAU",
+      "id": 3,
+      "name": "Patti Rodgers",
+      "message": "Sei product bodda, sei sei",
+      "rate": 3.5
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5SlxmQQ1u70uk5Xd6WilP9ojlT28FpwL_ag&usqp=CAU",
+      "id": 4,
+      "name": "Rita Simon",
+      "message": "Sei product bodda, sei sei",
+      "rate": 5.0
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5SlxmQQ1u70uk5Xd6WilP9ojlT28FpwL_ag&usqp=CAU",
+      "id": 5,
+      "name": "Salvatore Greene",
+      "message": "Sei product bodda, sei sei",
+      "rate": 3.7
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5SlxmQQ1u70uk5Xd6WilP9ojlT28FpwL_ag&usqp=CAU",
+      "id": 6,
+      "name": "Lila Morton",
+      "message": "Sei product bodda, sei sei",
+      "rate": 4.7
+    }
+  ]
