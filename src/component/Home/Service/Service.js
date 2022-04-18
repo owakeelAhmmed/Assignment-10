@@ -10,10 +10,11 @@ const service = ({service}) => {
                  <img src={image} className=" p-3" alt="..."/>
             </div>
             <div className="">
-                    <h5 className="card-title text-danger">{ name }</h5>
-                <p className=" text-primary p-3">{ description }</p>
-                 <Link className="nav-link btn btn-danger text-white fs-5 fw-bold w-50 mb-5" to="pricing">Buy Now</Link>
+                    <h3 className="card-title fw-bold text-danger">{ name }</h3>
+                <p className=" text-white p-3">{ description }</p>
+                 <Link className="nav-link btn btn-danger text-white ms-3 fs-5 fw-bold w-50 mb-5" to="pricing">Buy Now</Link>
             </div>
+            
         </div>
     );
 };
