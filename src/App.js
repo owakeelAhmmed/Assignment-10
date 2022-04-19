@@ -8,6 +8,7 @@ import Login from './component/Login/Login';
 import RequireAuth from './RequireAuth/RequireAuth';
 import Footer from './component/Footer/Footer';
 import Pricing from './component/Pricing/Pricing';
+import Blogs from './component/Blogs/Blogs';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
             <Pricing />
           </RequireAuth>
         } />
+        <Route path="/blogs" element={ <Blogs/> } />
         <Route path="/login" element={ <Login/> }/>
       </Routes>
       <Footer/>

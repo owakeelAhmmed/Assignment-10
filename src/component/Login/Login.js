@@ -1,18 +1,21 @@
-import React, { useState } from 'react';
-import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import React, { useRef, useState } from 'react';
+import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase/Firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
-
+import { sendPasswordResetEmail } from 'firebase/auth';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
     
+    const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth, {useSendEmailVerification: true});
+    const emailRef = useRef('')
     const [login, setLogin] = useState(false);
     const [confirmError, setConfirmError] = useState('');
 
-
+console.log(confirmError);
 
 
     const [userInfo, setUserInfo] = useState({
@@ -47,15 +50,17 @@ const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
       
+        
 
         if (!login) {
             
-        if(userInfo.password !== userInfo.confirmPass)
-              {
-                setConfirmError("Password don't match");
+            if (userInfo.password !== userInfo.confirmPass){
+                setConfirmError("Password dont match");
+            } else {
+                setConfirmError("")
               }
             
-            setConfirmError("")
+            
             createUserWithEmailAndPassword(userInfo.email, userInfo.password)
         }
         else {
@@ -71,7 +76,22 @@ const Login = () => {
         navigate(from, { replace: true });
     }
 
+// reset Password
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        }
+        else{
+            toast('please enter your email address');
+        }
+    }
+
+
     return (
+
+        
         <div className="container">
             <div className="w-50 mx-auto mt-5">
                 <h1 className="text-danger">
@@ -82,7 +102,7 @@ const Login = () => {
                 <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                    <input onBlur={(event)=>handleFormInput(event)} type="text" name ="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                    <input onBlur={(event)=>handleFormInput(event)} ref={emailRef} type="text" name ="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
                     <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                 </div>
                     
@@ -99,7 +119,7 @@ const Login = () => {
                 }
                     <p className="text-danger">{confirmError}</p>
                        {
-                        createError && <p className="text-danger">{toast(confirmError?.message)}</p>
+                        createError && <p className="text-danger">{(confirmError.message)}</p>
                        }
                     {
                         createUser && <p className="text-success">User creat successfully</p>
@@ -111,9 +131,13 @@ const Login = () => {
                         <input onBlur={(event)=>handleFormInput(event)} type="checkbox" className="form-check-input" id="exampleCheck1" onChange={() => setLogin(!login)} /> 
                         <label className="form-check-label text-white" htmlFor="exampleCheck1">Check me out</label>
                     </div>
-        
-                <button type="submit" className="btn btn-primary">{login ? 'Login' : 'Register'}</button>
-                 
+                    <p className="text-danger">Forget Password? <button className='btn btn-link text-primary pe-auto 
+                        text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
+                    
+                    <button type="submit" className="btn btn-primary">{login ? 'Login' : 'Register'}</button>
+                    <br />
+                <button onClick={()=> signInWithGoogle()} type="submit" className="btn btn-primary mt-3">Google Sing In</button>
+                 <ToastContainer/>
                 </form>
             </div>
             </div>

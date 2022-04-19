@@ -1,0 +1,12 @@
+.card-container{
+    height: 100vh;
+}
+.cards-body{
+    margin-top: 90px;
+}
+.cards-container{
+    border-radius: 33px;
+    background: #23262A;
+    box-shadow:  11px 11px 30px #111214,
+                -11px -11px 30px #353a40;
+}
