@@ -3,6 +3,7 @@ import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword } from
 import auth from '../../Firebase/Firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 
 
@@ -67,13 +68,13 @@ const Login = () => {
     // let auth = useAuth();
     let from = location.state?.from?.pathname || "/";
     if (loguser) {
-        Navigate(from, { replace: true });
+        navigate(from, { replace: true });
     }
 
     return (
         <div className="container">
             <div className="w-50 mx-auto mt-5">
-                <h1>
+                <h1 className="text-danger">
                     {
                         login ? 'Login' : 'Register'
                     }
@@ -86,19 +87,19 @@ const Login = () => {
                 </div>
                     
                 <div className="mb-3">
-                    <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+                    <label htmlFor="exampleInputPassword1" className="form-label text-white">Password</label>
                     <input onBlur={(event)=>handleFormInput(event)} type="password" name = "password" className="form-control" id="exampleInputPassword1"/>
                 </div>
                     
                 {
                     !login && <div className="mb-3">
-                    <label htmlFor="exampleInputPassword1" className="form-label">Confirm Password</label>
+                    <label htmlFor="exampleInputPassword1" className="form-label text-white">Confirm Password</label>
                     <input onBlur={(event)=>handleFormInput(event)} type="password" name = "confirmPass" className="form-control" id="exampleInputPassword1"/>
                     </div>
                 }
                     <p className="text-danger">{confirmError}</p>
                        {
-                        createError && <p className="text-danger">{confirmError.message}</p>
+                        createError && <p className="text-danger">{toast(confirmError?.message)}</p>
                        }
                     {
                         createUser && <p className="text-success">User creat successfully</p>
@@ -108,7 +109,7 @@ const Login = () => {
                     }
                     <div className="mb-3 form-check">
                         <input onBlur={(event)=>handleFormInput(event)} type="checkbox" className="form-check-input" id="exampleCheck1" onChange={() => setLogin(!login)} /> 
-                        <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
+                        <label className="form-check-label text-white" htmlFor="exampleCheck1">Check me out</label>
                     </div>
         
                 <button type="submit" className="btn btn-primary">{login ? 'Login' : 'Register'}</button>
