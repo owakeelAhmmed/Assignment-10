@@ -45,7 +45,7 @@ const Home = () => {
              <div className="container d-flex justify-content-between">
                 
             <div class="row">
-                <div class="col-8">
+                <div class="col-8 baner-title">
                     <span className="text-danger mb-3">Wellcome to Treina</span>
                     <h1 className="text-danger">Become More Healthy and Stay Sporty</h1>
                     <button className="btn btn-primary mt-3">Get Started</button>

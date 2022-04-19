@@ -2,6 +2,9 @@ body{
     background-color: #23262A;
     height: 100vh;
 }
+.baner-title{
+    margin-top: 200px;
+}
 .header-title{
     margin-top: 100px;
 }
