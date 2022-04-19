@@ -9,6 +9,7 @@ import RequireAuth from './RequireAuth/RequireAuth';
 import Footer from './component/Footer/Footer';
 import Pricing from './component/Pricing/Pricing';
 import Blogs from './component/Blogs/Blogs';
+import About from './component/About/About';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           </RequireAuth>
         } />
         <Route path="/blogs" element={ <Blogs/> } />
+        <Route path="/about" element={ <About/> } />
         <Route path="/login" element={ <Login/> }/>
       </Routes>
       <Footer/>
